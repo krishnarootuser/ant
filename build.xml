@@ -1,8 +1,12 @@
 <?xml version="1.0"?>
    <project name="hello world" default="info">
    
-   <target name="info">
+   <target name="info" depends="setproperty">
      <echo>Hello world</echo>
+   </target>
+   <property name="sitename" value="ubuntu@ubuntu"/>
+   <target name="setproperty">
+     <echo>${sitename}</echo>
    </target>
 
 </project>
